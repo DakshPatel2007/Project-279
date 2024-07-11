@@ -1,0 +1,88 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/GlossyPaint.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/CementTiles.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.262921509734833 0.07767898526914993 -0.9616851121683808 2.58793219317593
+  position 7.877068406759757 5.543348831268829 5.257219453017618
+}
+TexturedBackground {
+  texture "noon_sunny_empty"
+}
+TexturedBackgroundLight {
+}
+DEF Cylinder Pose {
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0.235294 0.0823529
+        roughness 1
+      }
+      geometry Cylinder {
+        height 0.5
+        radius 0.25
+      }
+    }
+  ]
+}
+DEF Box Pose {
+  translation 0 -0.77 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.490196 1 0.576471
+        roughness 1
+        emissiveIntensity 0
+      }
+      geometry Box {
+        size 0.5 0.5 0.5
+      }
+    }
+  ]
+}
+DEF Capsule Pose {
+  translation 0 0.56 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.203922 0.321569 1
+        roughness 1
+      }
+      geometry Capsule {
+        height 0.5
+        radius 0.1
+      }
+    }
+  ]
+}
+DEF Sphere Pose {
+  translation 0 1.04 0
+  children [
+    Shape {
+      appearance GlossyPaint {
+        baseColor 0.984314 1 0.145098
+      }
+      geometry Sphere {
+        radius 0.3
+        subdivision 4
+      }
+    }
+  ]
+}
+Transform {
+  translation 0.09 0.19 -0.37
+  children [
+    Shape {
+      appearance CementTiles {
+      }
+      geometry Plane {
+        size 4 4
+      }
+    }
+  ]
+}
